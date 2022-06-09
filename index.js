@@ -22,6 +22,7 @@
 //     console.log(x) //output 18
 // }
 // console.log(x) //output 18
+
 // **************** let ****************
 // let x = 5;
 // console.log(x)  // output 5
@@ -61,23 +62,23 @@
 // let a = 15 + 5 + 25 + "umesh" + 35 + 006;
 // console.log(a)
 // console.log(typeof (a))
-// let a = null
+// let b = null
 // a = 5;
-// console.log(a)
+// console.log(b)
 
 // ****************** Function ********************
 
 // function abc(p1, p2) {
 //     return p1 + p2;
 // }
-// let x = abc(5, 2);
+// let x = abc(5, 2);  // function call
 // console.log(x)
 // function abc1() {
 //     document.getElementsByClassName('form_data').style.background = 'red';
 // }
 
 // function abc() {
-//     let carName = "volvo";
+//     let carName = "volvo";      // let is block scope
 //     console.log(carName)       // output volvo
 // }
 // console.log(carName)         // error : carName is not defined
@@ -160,7 +161,7 @@
 // let con = console.log(str.concat(" ", str2))
 
 // ********** 9. `.strim` ***********
-        // remove extra space both side
+// remove extra space both side
 // let str = "                 hello         "
 // let str2 = console.log(str.trim());
 
@@ -194,12 +195,12 @@ console.log(typeof y+00023);
 
 /* 2.   .toExponential */
 
-/*
-let x = 12.23;
-console.log(x.toExponential(2))
-console.log(x.toExponential(4))
-console.log(x.toExponential(6))
-*/
+
+// let x = 12.23;
+// console.log(x.toExponential(2))
+// console.log(x.toExponential(4))
+// console.log(x.toExponential(6))
+
 
 // ********************* Array *****************************
 
@@ -223,7 +224,7 @@ console.log(x.toExponential(6))
 // let array=["laptop","mobile","mouse","keybord"]
 // console.log(array.length -1)
 
-  // ***** for loop with array *****
+// ***** for loop with array *****
 
 // const item = ["laptop", "mobile", "mouse", "keyboard"];
 // // let list=item.length;
@@ -254,18 +255,18 @@ console.log(x.toExponential(6))
 // const item=["laptop","keyboard","mouse"]
 // console.log(item.pop())   //remove last Element
 
-// const item=["laptop","keyboard","mouse"]
-// console.log(item.push("umesh"))   // return new lenght
-// console.log(item)                 // add item
+// const item = ["laptop", "keyboard", "mouse"]
+// console.log(item.push("umesh"))   // return new index
+// console.log(item)                 // return new lenght and add item from last
 
 
 // const item=["laptop","keyboard","mouse"]
-// console.log(item.shift())   // remove first element 
+// console.log(item.shift())   // remove first element
 // console.log(item)           //  new item after remove item
 
 // const item=["laptop","keyboard","mouse"]
-// console.log(item.unshift("mobile"))   // allways add first element and show index 
-// console.log(item)           //  new item add  
+// console.log(item.unshift("mobile"))   // allways add first element and show index
+// console.log(item)                     //  new item add
 
 
 // const item=["laptop","keyboard","mouse"]
@@ -273,12 +274,12 @@ console.log(x.toExponential(6))
 // console.log(d)                  // output undifine
 
 // const item=["laptop","keyboard","mouse"]
-// console.log(item.splice(2,0,"umesh","mobile"))  
+// console.log(item.splice(2,0,"umesh","mobile"))
 // console.log(item)
 
-// const item=["laptop","keyboard","mouse"]
+// const item=["laptop","keyboard","mouse","mobile","desktop"]
 // console.log(item.slice(1))  //remove first Elements
-// console.log(item.slice(1,5))  
+// console.log(item.slice(0,3))
 // console.log(item)
 
 // const item=["laptop","keyboard","mouse","laptop1","keyboard1","mouse1"]
@@ -311,14 +312,14 @@ console.log(x.toExponential(6))
 //     return a-b
 //     })
 //     document.getElementById("demo2").innerHTML = item2
- 
+
 // }
 // function myFunction2()
 // {
 // 	item.sort()
-    
+
 //     document.getElementById("demo").innerHTML = item
- 
+
 // }
 
 
@@ -326,4 +327,150 @@ console.log(x.toExponential(6))
 // console.log(number.sort(function randm (a,b){
 //   return 0.5 - Math.random()
 // }))
+
+// const item = [40, 100, 1, 5, 25, 10];
+// console.log(item)
+// for (let i = item.length - 1; i > 0; i--) {
+//   let j = Math.floor(Math.random() * i)
+//   let k = item[i];
+//   item[i] = item[j]
+// // console.log(j + " j")
+// // console.log(item[j] + " j")
+// // console.log(item[i] + " i")
+// item[j] = k;
+// // console.log(i + " i")
+
+// console.log(k + " k")
+// }
+
+// ***** Math.max Function ********
+
+// const item = [45, 45, 8, 2, 23, 269, 8, 9, 45]
+
+// document.getElementById("demo").innerHTML = myItem(item)
+
+// function myItem(arr) {
+//   return Math.max.apply(null, arr)
+// }
+// let a=myItem()
+// console.log(a)
+
+
+// ***** Math.min Function ********
+// const item = [45, 45, 8, 2, 23, 269, 8, 9, 45]
+
+// document.getElementById("demo").innerHTML = myItem(item)
+
+// function myItem(arr) {
+//   return Math.min.apply(null, arr)
+// }
+
+
+// Find Max Number
+
+// const item = [45, 45, 8, 2, 23, 269, 8, 9, 45]
+
+// document.getElementById("demo").innerHTML = myItem(item);
+
+// function myItem(arr) {
+//     let len = arr.length;
+//     let max = -Infinity;
+
+//     while (len--) {
+//         if (arr[len] > max) {
+//             max = arr[len]
+//         }
+//     }
+//     return max;
+// }
+
+
+// ***************** Array Iteration *******************
+
+// ********** forEach Method ************
+
+// const data = [45, 8, 5, 63, 5, 12]
+
+// let txt = ""
+// data.forEach(myFunction);
+// document.getElementById("demo").innerHTML = txt;
+
+// function myFunction(value, index, array) {
+//   txt += value + "<br>";
+// }
+
+// const data = [45, 68, 65, 23, 47, 25, 9];
+
+// data.forEach(function (currentvalu, index) {
+//   console.log(index + "->" + currentvalu)
+// })
+
+// increement every value 100+
+
+// const data = [10, 20, 30, 40, 50]
+// console.log(data)
+// data.forEach(function (value, index, arr) {
+//   console.log(arr[index] + 100)
+// })
+
+// const data = ["python", "java", "react"];
+
+// data.forEach(function (currentvalu) {
+//   console.log(currentvalu)
+// })
+
+
+// ********** map Method ************
+
+// const data = ["python", "java", "react"]
+// console.log(data)
+// let item = data.map(function (value, ind) {
+//   return ind + " : " + value + " language";
+// })
+
+// console.log(item)
+
+
+// const olddata = [
+//   { id: 1, name: "umesh", degree: "bscit" },
+//   { id: 2, name: "aksh", degree: "bscit" },
+//   { id: 3, name: "prakas", degree: "bscit" },
+// ];
+
+
+// ********** Filter Method ************
+
+// const olddata = [100, 200, 300, 400, 500, 600, 700]
+// console.log("old data " + olddata);
+
+// let newdata = olddata.filter((value,index) => {
+//   return value > 1500;
+// })
+// console.log("newdata " + newdata);
+
+// let newdata = olddata.map((value) => {
+//   return `id is : ${value.id}, name : ${value.name}, degree:${value.degree}`
+// })
+// document.getElementById("demo").innerHTML = newdata
+// console.log(newdata)
+
+
+// ********** reduce Method ************
+
+// const data = [1, 2, 3, 4, 5, 6, 7, 8]
+
+// let sum = data.reduce((req, res) => {
+//   // debugger;
+//   return req + res;
+// })
+// console.log(sum)
+
+// ********** Some Method ************
+
+// const data = [15,2,6,45,26,23]
+// let age = data.some((req)=>{
+//   return req >=26;
+// })
+// console.log(age)
+
 
