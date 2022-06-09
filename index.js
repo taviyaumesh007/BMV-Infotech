@@ -165,4 +165,165 @@
 // let str2 = console.log(str.trim());
 
 
-****************  String search method ****************
+// ****************  String search method ****************
+
+// let str1="JavaScript counts positions from zero"
+// let result1 = console.log(str1.indexOf("c")+ " :indexOf ");
+
+// let str="JavaScript counts positions from zero";
+// let result = console.log(str.lastIndexOf("r",)+ " :lastIndexOf ");
+
+// let str2="JavaScript counts positions from zero";
+// let result2 = console.log(str2.search("c",)+ " :search()");
+
+// let str3="JavaScript counts positions from zero";
+// let result3 = console.log(str3.includes("c",20)+" :includes()")
+
+// let str4="JavaScript counts positions from zero"
+// let result4 = console.log(str4.startsWith("counts","from")+" :stringwith");
+
+/* *************Numbehr method ************** */
+
+/* 1. .toString */
+
+/* let x= 123;
+console.log(x.toString());
+let y= x;
+console.log(typeof y+00023);
+ */
+
+/* 2.   .toExponential */
+
+/*
+let x = 12.23;
+console.log(x.toExponential(2))
+console.log(x.toExponential(4))
+console.log(x.toExponential(6))
+*/
+
+// ********************* Array *****************************
+
+// let array=["laptop","mouse","mobile","desktop"];
+// let update=array[2]="keybord";  // update Element of array
+
+// let array=["laptop","mouse","mobile","desktop"];
+// let update=array[2]     //  find Element of array
+
+// object
+// let obj = {
+//   name: "umesh",
+//   divice: "laptop"
+// };
+// let output = obj.divice;    // accecc to object data
+// console.log(output);
+
+// let array=["laptop","mobile","mouse","keybord"]
+// console.log(array.length)
+
+// let array=["laptop","mobile","mouse","keybord"]
+// console.log(array.length -1)
+
+  // ***** for loop with array *****
+
+// const item = ["laptop", "mobile", "mouse", "keyboard"];
+// // let list=item.length;
+// let text = "<ul>";
+// for (let i = 0; i < item.length; i++) {
+//   text += "<li>" + item[i] + "</li>";
+// }
+// text += "</ul>";
+// document.getElementById("demo").innerHTML=text;
+
+
+
+// const point = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+// console.log(point);
+
+// const point2=[4,5,6,8,6,2,4,8,6]
+// console.log(point2);
+
+
+// ***************** Array Methods ****************
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.toString())
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.join())
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.pop())   //remove last Element
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.push("umesh"))   // return new lenght
+// console.log(item)                 // add item
+
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.shift())   // remove first element 
+// console.log(item)           //  new item after remove item
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.unshift("mobile"))   // allways add first element and show index 
+// console.log(item)           //  new item add  
+
+
+// const item=["laptop","keyboard","mouse"]
+// let d=console.log(delete [2])   // allways add first element and show index
+// console.log(d)                  // output undifine
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.splice(2,0,"umesh","mobile"))  
+// console.log(item)
+
+// const item=["laptop","keyboard","mouse"]
+// console.log(item.slice(1))  //remove first Elements
+// console.log(item.slice(1,5))  
+// console.log(item)
+
+// const item=["laptop","keyboard","mouse","laptop1","keyboard1","mouse1"]
+// console.log(item.toString())    // array to conver to string
+
+// const item=["laptop","dhaval","akash","rahul"]
+// console.log(item.sort())
+// console.log(item.reverse())
+
+// const item=[45,39,5,89,3,4,89,4,5,9,56,87,2,3,32]
+// console.log(item.sort(function(a,b){
+//   return a-b
+// }))
+
+// const item=[45,39,5,89,3,4,89,4,5,9,56,87,2,3,32]
+// console.log(item.sort(function(a,b){
+//   return b-a
+// }))
+
+
+// const item2=[45,39,5,89,3,4,89,4,5,9,56,87,2,3,32]
+// const item=["umesh","akash","prekash","arpit","dhaval","divyansh","dharm"];
+
+// document.getElementById("demo2").innerHTML = item2;
+// document.getElementById("demo").innerHTML = item;
+
+// function myFunction1()
+// {
+// 	item2.sort(function(a,b){
+//     return a-b
+//     })
+//     document.getElementById("demo2").innerHTML = item2
+ 
+// }
+// function myFunction2()
+// {
+// 	item.sort()
+    
+//     document.getElementById("demo").innerHTML = item
+ 
+// }
+
+
+// const number= [1,2,3,4,5,6,7,8,9]
+// console.log(number.sort(function randm (a,b){
+//   return 0.5 - Math.random()
+// }))
+
