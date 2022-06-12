@@ -474,3 +474,52 @@ console.log(typeof y+00023);
 // console.log(age)
 
 
+// ********** Date  ************
+
+// const a = new Date(2022 - 10 - 06)
+// console.log(a)
+
+// const b = new Date(2022 - 10 - 06)
+// console.log(b)
+
+// const d = new Date()
+// console.log(d.getFullYear())
+// console.log(d.getDate())
+// console.log(d.getTime())
+// console.log(d.getUTCHours())
+
+
+// const d = new Date()
+// console.log(d.getFullYear(2022))
+
+
+//********************* Switch Case **************
+
+// let day;
+
+// switch (new Date().getDay()) {
+//     case 0:
+//         day = "sunday";
+//         break;
+//     case 1:
+//         day = "monday";
+//         break;
+//     case 2:
+//         day = "tuesday";
+//         break;
+//     case 3:
+//         day = "wednesday";
+//         break;
+//     case 4:
+//         day = "thursday";
+//         break;
+//     case 5:
+//         day = "friday";
+//         break;
+//     case 6:
+//         day = "saturday";
+//         break;
+// }
+
+// console.log(day)
+
