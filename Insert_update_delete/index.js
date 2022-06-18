@@ -3,11 +3,10 @@ let dataValue = false;
 let vardata = ""
 
 function getdata() {
-
+    // debugger
     let name = document.getElementById("firstname").value
     let email = document.getElementById("email").value
     let dropDown = document.getElementById("drop_down").value
-
 
     let data = {
         firstname: name,
@@ -16,39 +15,38 @@ function getdata() {
         drop_down: dropDown,
         checkbox: checkbox(),
     }
-
+    console.log(data)
     if (dataValue) {
-
         let upValue = arry.map((value, ind) => {
             if (ind === vardata) {
                 return data
             }
             return value
         })
-
         arry = upValue
-
         formData();
         clear();
         dataValue = false
     }
     else {
         arry.push(data);
-
+        console.log(arry)
         formData();
         clear()
     }
 }
 function clear() {
+    // debugger
     document.getElementById("firstname").value = ""
     document.getElementById("email").value = ""
     document.getElementById("male").checked = false
     document.getElementById("female").checked = false
     document.getElementById("drop_down").value = ""
-    document.getElementById("chechbox").checked = false
-    document.getElementById("chechbox1").checked = false
+    document.getElementById("checkbox").checked = false
+    document.getElementById("checkbox1").checked = false
 }
 function formData() {
+    // debugger
     document.getElementById("table_data").innerHTML = arry.map((user, index) => {
         return (
             `<tr>
@@ -67,28 +65,47 @@ function formData() {
     })
 }
 function deleteData(data1) {
-    let data = document.getElementById("table_data")
+    // debugger
     let index = arry.filter((value, ind) => {
         return ind !== data1;
     })
-
     arry = index
     formData()
 }
 
 function updateData(data2) {
-    let data = document.getElementById("table_data")
+    // debugger
     let index = arry.find((value, ind) => {
         return ind === data2
     })
+    console.log(index)
     document.getElementById("firstname").value = index.firstname
     document.getElementById("email").value = index.email
+    document.getElementById("drop_down").value = index.drop_down
+
+
     dataValue = true;
     vardata = data2
 
+    if(document.getElementById("male").value === index.gender){
+       return document.getElementById("male").checked = true ;
+    }
+    else if(document.getElementById("female").value === index.gender){
+       return document.getElementById("female").checked = true ;
+    }
+
+    // checkbox 
+
+    if(document.getElementById("checkbox").value === index.checkbox){
+       return document.getElementById("checkbox").checked = true ;
+    }
+    else if(document.getElementById("checkbox1").value === index.checkbox){
+       return document.getElementById("checkbox1").checked = true ;
+    }
 }
 
 function radioButton() {
+    // debugger
     let male = document.getElementById("male")
     let female = document.getElementById("female")
     let empty = " "
@@ -100,17 +117,19 @@ function radioButton() {
     }
     return empty;
 }
+
 function checkbox() {
+    // debugger
     let checkbox = document.getElementById("checkbox")
     let checkbox1 = document.getElementById("checkbox1")
-    let empty = " ";
+    let empty1 = " ";
 
     if (checkbox.checked == true) {
-        empty = document.getElementById("checkbox").value
+        empty1 += document.getElementById("checkbox").value + ", "
     }
     if (checkbox1.checked == true) {
-        empty = document.getElementById("checkbox1").value
+        empty1 += document.getElementById("checkbox1").value
     }
-    return empty;
-    console.log(empty)
+    return empty1;
+    console.log(empty1)
 }
