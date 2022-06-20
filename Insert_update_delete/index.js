@@ -8,6 +8,11 @@ function getdata() {
     let email = document.getElementById("email").value
     let dropDown = document.getElementById("drop_down").value
 
+    let update = document.getElementById("update");
+    if (update.textContent.includes("update")) {
+        update = document.getElementById("update").innerHTML = "submit";
+    }
+    console.log(update)
     let data = {
         firstname: name,
         email: email,
@@ -62,7 +67,7 @@ function formData() {
             </td>
             </tr>`
         )
-    })
+    }).join("");
 }
 function deleteData(data1) {
     // debugger
@@ -83,25 +88,30 @@ function updateData(data2) {
     document.getElementById("email").value = index.email
     document.getElementById("drop_down").value = index.drop_down
 
-
     dataValue = true;
     vardata = data2
-
-    if(document.getElementById("male").value === index.gender){
-       return document.getElementById("male").checked = true ;
+    let update = document.getElementById("update");
+    if (update.textContent.includes("submit")) {
+        update = document.getElementById("update").innerHTML = "update"
     }
-    else if(document.getElementById("female").value === index.gender){
-       return document.getElementById("female").checked = true ;
-    }
-
+    console.log(update)
     // checkbox 
+    if (index.checkbox.includes(document.getElementById("checkbox").value)) {
+        console.log(index.checkbox)
+        document.getElementById("checkbox").checked = true
+    }
+    if (index.checkbox.includes(document.getElementById("checkbox1").value)) {
+        console.log(index.checkbox)
+        document.getElementById("checkbox1").checked = true
+    }
 
-    if(document.getElementById("checkbox").value === index.checkbox){
-       return document.getElementById("checkbox").checked = true ;
+    if (document.getElementById("male").value === index.gender) {
+        return document.getElementById("male").checked = true;
     }
-    else if(document.getElementById("checkbox1").value === index.checkbox){
-       return document.getElementById("checkbox1").checked = true ;
+    else if (document.getElementById("female").value === index.gender) {
+        return document.getElementById("female").checked = true;
     }
+
 }
 
 function radioButton() {
