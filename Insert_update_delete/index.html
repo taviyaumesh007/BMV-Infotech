@@ -16,18 +16,21 @@
 
 <body>
     <div class="containar">
-        <div class="form_data">
+        <div class="form_data" method="post">
             <h1 class="material-symbols-outlined">
                 account_circle
             </h1>
             <label for="firstname">First Name</label>
-            <input type="text" placeholder="Fisrt Name" id="firstname" required>
+            <input type="text" placeholder="Fisrt Name" id="firstname">
+            <p id="fname" class="error"></p>
             <label for="email">Email</label>
-            <input type="text" placeholder="example@gmail.com" id="email" required>
+            <input type="text" placeholder="example@gmail.com" id="email">
+            <p id="eml" class="error"></p>
             <div>
                 <label for="gender">Gender</label><br>
                 male<input id="male" type="radio" value="male" name="gender">
                 female<input id="female" type="radio" value="female" name="gender">
+                <p id="genval" class="error"></p>
             </div>
             <select id="drop_down" class="mb-3">
                 <option value=""></option>
@@ -35,6 +38,7 @@
                 <option value="Two">Two</option>
                 <option value="Three">Three</option>
             </select>
+            <p id="drdError" class="error"></p>
             <div class="form-check">
                 <input id="checkbox" type="checkbox" value="Default checkbox" name="checkbox">
                 <label for=" flexCheckDefault">
@@ -44,6 +48,7 @@
                 <label for="flexCheckChecked">
                     Checked checkbox
                 </label>
+                <p id="ckdError" class="error"></p>
             </div>
 
             <button onclick="getdata()" id="update" type="submit" value="submit">submit</button>

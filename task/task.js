@@ -9,11 +9,11 @@
 
 // *********************  task:2 ***********************
 
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.filter((value) => {
-//     return value <= 40;
-// })
-// console.log(result);
+const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
+let result = ages.filter((value) => {
+    return value == 40;
+})
+console.log(result);
 
 
 // *********************  task:3 ***********************
