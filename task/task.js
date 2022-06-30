@@ -1,119 +1,60 @@
-// *********************  task:1 ***********************
+// ********** task 1 **********
 
-// const ages = [30, 39, 40, 25, 30, 40, "25", "39"]
-// let equal = ages.filter((value) => {
-//     return value == 39 ;
-// })
-// console.log(equal);
+const age = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
+console.log(age)
 
-
-// *********************  task:2 ***********************
-
-const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-let result = ages.filter((value) => {
-    return value == 40;
-})
-console.log(result);
-
-
-// *********************  task:3 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.filter((value) => {
-//     return value == 25;
-// })
-// console.log(result);
-
-
-// *********************  task:4 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.some((value) => {
-//     return value == 25;
-// })
-// console.log(result);
-
-// *********************  task:5 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.sort((a,b) => {
-//     return a-b;
-// })
-// console.log(result);
-
-// *********************  task:6 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.filter((value) => {
-//     return typeof value === "string" ;
-// })
-// console.log(result);
-
-
-// *********************  task:7 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// console.log(" old data : " + ages)
-// let result =ages;
-// result.push(15)
-// console.log(" new data : " + result)
-
-
-// *********************  task:8 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.filter((value) => {
-
-//     return value !== 40
+// const result = age.filter((currelt) => {
+//     return currelt === 39
 // })
 // console.log(result)
 
-// *********************  task:9 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-// let result = ages.filter((value) => {
-//     return typeof value !== "string"
-// }).reduce((r, s) => {
-//     return r + s
-// })
-
-// console.log(result)
-// let sum = result.reduce((r, s) => {
-//     return r + s
-// })
-// console.log(sum)
-
-// *********************  task:10 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-
-// let result = ages.filter((value) => {
-//     return value === 25;
+// const result = age.filter((currelt) => {
+//     return currelt <= 40
 // })
 // console.log(result)
 
-// *********************  task:11 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-
-// let result = ages.some((value) => {
-//     return value == 37;
+// const result = age.filter((currelt) => {
+//     return currelt == 25
 // })
 // console.log(result)
 
-
-// *********************  task:12 ***********************
-
-// const ages = [30, 39, 40, 25, 30, 42, 30, 40, "25", "39"]
-
-// let res = ages.every((value) => {
-//     return value < 50;
+// const result = age.some((currelt) => {
+//     return currelt < 25
 // })
-// console.log(res)
+// console.log(result)
 
-// *********************  task:13 ***********************
+// age.sort()
+// console.log(age)
 
-// const data = ["Dishant", "arpit", "dhaval", "akash", "prakash", "dharm"]
-// data.forEach((value) => {
-//     console.log(value)
+// const result = age.filter((currelt) => {
+//     return typeof currelt === 'string'
 // })
+// console.log(result)
+
+// age.push(80)
+// console.log(age)
+
+// const result = age.filter((currelt) => {
+//     return currelt != 40
+// })
+// console.log(result)
+
+// const result = age.filter((currelt) => {
+//     return typeof currelt === 'number'
+// }).reduce((currelt, element) => {
+//     return currelt + element
+// })
+// console.log(result)
+
+// const result = age.indexOf(25)
+// console.log(result)
+
+// const result = age.some((currelt) => {
+//     return currelt == 37
+// })
+// console.log(result)
+
+// const result = age.every((currelt) => {
+//     return currelt < 50
+// })
+// console.log(result)

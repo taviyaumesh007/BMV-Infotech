@@ -22,12 +22,15 @@
             </h1>
             <label for="firstname">First Name</label>
             <input type="text" placeholder="Fisrt Name" id="firstname" required />
+            <p id="nameError"></p>
             <label for="email">Email</label>
             <input type="email" placeholder="example@gmail.com" id="email" required />
+            <p id="emailError"></p>
             <div>
                 <label for="gender">Gender</label><br>
                 male<input id="male" type="radio" value="male" name="gender">
                 female<input id="female" type="radio" value="female" name="gender">
+                <p id="genderError"></p>
             </div>
 
             <select id="drop_down" class="mb-3">
@@ -36,19 +39,25 @@
                 <option value="Two">Two</option>
                 <option value="Three">Three</option>
             </select>
+            <p id="drdDownError"></p>
             <div class="form-check">
                 <input id="checkbox" type="checkbox" value="html" name="checkbox">
-                <label for=" flexCheckDefault">
+                <label for=" html">
                     html
                 </label><br>
                 <input id="checkbox1" type="checkbox" value="css" name="checkbox">
-                <label for="flexCheckChecked">
+                <label for="css">
                     css
                 </label>
+                <p id="ckdError"></p>
             </div>
 
             <button onclick="getdata()" id="update" type="submit" value="submit">submit</button>
         </div>
+    </div>
+    <div class="d-flex m-lg-2">
+        <input id="searchData" type="search" placeholder="Search" aria-label="Search">
+        <button onclick="search()" class="btn btn-outline-success">Search</button>
     </div>
     <div class="containar">
         <table class="table table-dark table-striped" id="storedata">

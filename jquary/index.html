@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jquary Practice</title>
+</head>
+<style>
+    #box {
+        height: 200px;
+        width: 300px;
+        overflow: auto;
+        border: 1px solid black;
+    }
+
+    #demo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    /* #box p{
+    border: 1px solid black;
+    
+   } */
+</style>
+
+<body>
+    <div id="box">
+        <h1>Jquary</h1>
+        <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing elit</span>. Fugiat veritatis, neque sapiente</p>
+        <!-- <form action="">
+            <label for="">name</label>
+            <input type="text" name="" id="sname">
+            <label for="">class</label>
+            <input type="text" name="" id="sclass"> 
+            </form> -->
+
+        <button id="addbutton">addclass</button>
+        <button id="removebutton">removeclass</button>
+        <button id="toggelbutton">toggelclass</button>
+
+    </div>
+
+    <!-- JQUARY FILE -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+    <!-- JQUARY code -->
+    <script>
+
+        //****************** click event *********************
+
+
+        // $(document).ready(function () {
+        //     // $("#list").css("background-color", "lightblue") // css required two argument ("property","value")
+        //     // $("li:first").css("border", "2px solid black") // perticuler elemennt to access
+        // });
+
+        /*
+                $(document).ready(function () {
+                    $('#list').click(function () {  // singel click color change
+                        $('#list').css('background-color', 'lightsteelblue') //change the color on click
+                        //     let a = $('#contain').html();
+                        //     console.log(a)
+                    });
+                    $('#list').dblclick(function () { // double click color change
+                        $('#list').css('background-color', 'red') //change the color on dubleclick
+                    });
+        
+                    $('#list').contextmenu(function () {  // right click color change
+                        $('#list').css('background-color', 'green') //change the color on rightclick
+                    })
+                    $('#list').mouseenter(function () {  // 
+                        $('#list').css('background-color', 'blue') 
+                    })
+                    $('#list').mouseleave(function () {  // 
+                        $('#list').css('background-color', 'white')
+                    })
+                })
+                $(document).ready(function () {
+                    $('#contain').click(function () {  // singel click color change
+                        $('#contain').css('background-color', 'lightsteelblue') //change the color on click
+                        //     let a = $('#contain').html();
+                        //     console.log(a)
+                    });
+                    $('#contain').dblclick(function () { // double click color change
+                        $('#contain').css('background-color', 'red') //change the color on dubleclick
+                    });
+        
+                    $('#contain').contextmenu(function () {  // right click color change
+                        $('#contain').css('background-color', 'green') //change the color on rightclick
+                    })
+                    $('#contain').mouseenter(function () {  // right click color change
+                        $('#contain').css('background-color', 'blue') //change the color on rightclick
+                    })
+                    $('#contain').mouseleave(function () {  // right click color change
+                        $('#contain').css('background-color', 'white') //change the color on rightclick
+                    })
+                })*/
+
+        //****************** key event *********************
+
+        /* $(document).ready(function () {
+             $("body").keydown(function () {
+                 $(this).css('background-color', 'lightyellow') // same use for keypress
+             })
+             $("body").keyup(function () {
+                 $(this).css('background-color', 'lightgreen')
+             })
+         })*/
+
+        //****************** Form Event *********************
+
+        /*$(document).ready(function () {
+            $('#sname ,#sclass, #snumber').focus(function () {
+                $(this).css('background-color', 'blue')
+            })
+            $('#sname,#sclass,#snumber').blur(function () {
+                $(this).css('background-color', '')
+            })
+            $('#snumber').change(function () {          // work on only drop-down list
+                // $(this).css('background-color', 'red')
+                let a = $(this).val()
+                $('#test').html(a)
+            })
+            $('#sname,#sclass').select(function () {        // working only input box
+                $(this).css('background-color', 'yellow')
+            })
+            $('#sform').submit(function () {
+                alert('hello all')
+            })
+        })*/
+
+        //****************** Window Event *********************
+        /* $(document).ready(function () {
+             // $(window).scroll(function () {
+             $('#box').scroll(function () {
+                 console.log("helloooooooooo")
+             })
+             $(window).resize(function () {
+                 console.log("helloooooooooo")
+             })
+         })*/
+
+        //****************** Get Method *********************
+
+        /*  $(document).ready(function () {
+              // let a = $('#box p').html()
+              // console.log(a)
+  
+              // let a = $('#box').text()
+              // console.log(a)
+  
+              // let a = $('#box').attr('class')
+              // console.log(a)
+  
+              $('#box').submit(function () {
+                  let sname = $('#sname').val()
+                  let classname = $('#sclass').val()
+                  let sitem = $('#sitem').val()
+                  alert("hello  " + sname + " " + classname + " " + sitem)
+              })
+  
+          })*/
+
+        //****************** Set Method *********************
+
+        /*  $(document).ready(function () {
+              $('#clickbutton').click(function () {
+                  $('#box h1').text("heloooo")
+                  // $('#box p').text("this is new paragraph")
+                  $('#box p').html("this <b>is new</b> paragraph")
+                  $('#box h1').attr('class', 'red')
+              })
+  
+              $('#sname').val("hello")
+              $('#sclass').val("hiiiiiiiiiii")
+  
+          })*/
+
+        //****************** addClass & removeClass Method *********************
+
+        /* $('#addbutton').click(function () {
+             $('#box').addClass('red blue')
+         })
+         $('#removebutton').click(function () {
+             $('#box').removeClass('blue')
+         })
+         $('#toggelbutton').click(function () {
+             $('#box').toggleClass('blue red')
+         })*/
+
+        //******************  CSS Method *********************
+
+        $(document).ready(function(){
+            
+        })
+
+    </script>
+</body>
+
+</html>

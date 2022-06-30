@@ -1,35 +1,40 @@
-let arry = []
-let dataValue = false;
-let vardata = ""
+let arry = JSON.parse(localStorage.getItem("formItem"))
+let dataValue = false
 function getdata() {
-    let name = document.getElementById("firstname").value
-    let email = document.getElementById("email").value
-    let drop_down = document.getElementById("drop_down").value
-
-    let obj = {
-        firstname: name,
-        email: email,
+    // debugger
+    let data = {
+        firstname: document.getElementById("firstname").value,
+        email: document.getElementById("email").value,
+        drop_down: document.getElementById("drop_down").value,
         gender: radioButton(),
-        drop_down: drop_down,
-        checkbox: checkbox(),
+        checkbox: checkBox()
     }
     if (dataValue) {
-        let upValue = arry.map((value, ind) => {
-            if (ind === vardata) {
-                return obj
+        let upvalue = arry.map((currelm, index) => {
+            if (index === vardata) {
+                return data
             }
-            return value;
+            return currelm
         })
-        arry = upValue
+        arry = upvalue
         formData()
         dataValue = false
     } else {
-        arry.push(obj)
+        arry.push(data)
         formData()
     }
     clear()
+    localStorage.setItem("formItem", JSON.stringify(arry))
 }
-
+function clear() {
+    document.getElementById("firstname").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("drop_down").value = ""
+    document.getElementById("male").checked = false
+    document.getElementById("female").checked = false
+    document.getElementById("checkbox").checked = false
+    document.getElementById("checkbox1").checked = false
+}
 function formData() {
     document.getElementById("table_data").innerHTML = arry.map((user, index) => {
         return (
@@ -40,7 +45,8 @@ function formData() {
             <td>${user.email}</td>
             <td>${user.gender}</td>
             <td>${user.drop_down}</td>
-            <td>${user.checkbox}</td> 
+            <td>${user.checkbox}</td>
+
             <td>
             <button onclick=deleteData(${index})>Delete</button>
             <button onclick=updateData(${index})>Update</button>
@@ -48,23 +54,27 @@ function formData() {
             </tr>
             `
         )
-    })
+    }).join("")
 }
 function deleteData(data1) {
-    let index = arry.filter((value, ind) => {
-        return ind !== data1
+    let deleted = arry.filter((currelm, index) => {
+        // console.log(currelm)
+        return index !== data1
     })
-    arry = index
+    arry = deleted
+    localStorage.setItem("formItem", JSON.stringify(deleted))
     formData()
 }
 function updateData(data2) {
-    let update = arry.find((value, ind) => {
-        return ind === data2
+    let update = arry.find((currelm, index) => {
+        return index == data2
     })
     document.getElementById("firstname").value = update.firstname
     document.getElementById("email").value = update.email
-    dataValue = true
-    vardata = data2;
+    document.getElementById("drop_down").value = update.drop_down
+
+    dataValue = true;
+    vardata = data2
     // checkbox
     if (update.checkbox.includes(document.getElementById("checkbox").value)) {
         document.getElementById("checkbox").checked = true
@@ -72,45 +82,62 @@ function updateData(data2) {
     if (update.checkbox.includes(document.getElementById("checkbox1").value)) {
         document.getElementById("checkbox1").checked = true
     }
-    // radioButton
-    if (document.getElementById("male").value == update.gender) {
+
+    // radio button
+    if (document.getElementById("male").value === update.gender) {
         document.getElementById("male").checked = true
-    } else if (document.getElementById("female").value == update.gender) {
+    } else if (document.getElementById("female").value = update.gender) {
         document.getElementById("female").checked = true
     }
 }
-function clear() {
-    document.getElementById("firstname").value = ""
-    document.getElementById("email").value = ""
-    document.getElementById("male").checked = false
-    document.getElementById("female").checked = false
-    document.getElementById("checkbox").checked = false
-    document.getElementById("checkbox1").checked = false
-}
 
+// radioButton
 function radioButton() {
     let male = document.getElementById("male")
     let female = document.getElementById("female")
-    let blank = ""
+    empty = ""
 
-    if (male.checked == true) {
-        blank = document.getElementById("male").value
-    } else if (female.checked == true) {
-        blank = document.getElementById("male").value
+    if (male.checked === true) {
+        empty = document.getElementById("male").value
+    } else if (female.checked === true) {
+        empty = document.getElementById("female").value
     }
-    return blank
+    console.log(empty)
+    return empty
 }
 
-function checkbox() {
-    let checkbox = document.getElementById("checkbox")
-    let checkbox1 = document.getElementById("checkbox1")
-    let blank = ""
+// checkBox
 
-    if (checkbox.checked == true) {
-        blank += document.getElementById("checkbox").value
+function checkBox() {
+    let check = document.getElementById("checkbox")
+    let check1 = document.getElementById("checkbox1")
+    let empty = ""
+
+    if (check.checked === true) {
+        empty += document.getElementById("checkbox").value
     }
-    if (checkbox1.checked == true) {
-        blank += document.getElementById("checkbox1").value
+    if (check1.checked === true) {
+        empty += document.getElementById("checkbox1").value
     }
-    return blank;
+    return empty
+}
+function search() {
+    let searchData = document.getElementById("searchData").value
+    let dbldata = JSON.parse(localStorage.getItem("formItem"))
+    if (!searchData) {
+        arry = dbldata
+        return formData()
+    }
+    let search = arry.filter((currelm) => {
+        return currelm.email == searchData
+    })
+    arry = search
+    formData()
+}
+
+if (arry == null) {
+    arry = []
+}
+if (arry.length > 0) {
+    formData()
 }
