@@ -10,10 +10,10 @@
 </head>
 <style>
     #box {
-        height: 200px;
+        height: 300px;
         width: 300px;
         overflow: auto;
-        border: 1px solid black;
+        border: 10px solid black;
     }
 
     #demo {
@@ -39,6 +39,8 @@
     <div id="box">
         <h1>Jquary</h1>
         <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing elit</span>. Fugiat veritatis, neque sapiente</p>
+        <!-- <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis, neque sapiente</p> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis, neque sapiente</p> -->
         <!-- <form action="">
             <label for="">name</label>
             <input type="text" name="" id="sname">
@@ -46,11 +48,16 @@
             <input type="text" name="" id="sclass"> 
             </form> -->
 
-        <button id="addbutton">addclass</button>
-        <button id="removebutton">removeclass</button>
-        <button id="toggelbutton">toggelclass</button>
-
+        <!-- <ol>
+            <li>hello1</li>
+            <li>hello2</li>
+            <li>hello3</li>
+        </ol> -->
     </div>
+    <br><br>
+    <button id="widthbtn">Width</button>
+    <button id="heightbtn">Height</button>
+
 
     <!-- JQUARY FILE -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -99,14 +106,14 @@
                         $('#contain').css('background-color', 'red') //change the color on dubleclick
                     });
         
-                    $('#contain').contextmenu(function () {  // right click color change
-                        $('#contain').css('background-color', 'green') //change the color on rightclick
+                    $('#contain').contextmenu(function () {  
+                        $('#contain').css('background-color', 'green') 
                     })
-                    $('#contain').mouseenter(function () {  // right click color change
-                        $('#contain').css('background-color', 'blue') //change the color on rightclick
+                    $('#contain').mouseenter(function () {  
+                        $('#contain').css('background-color', 'blue') 
                     })
-                    $('#contain').mouseleave(function () {  // right click color change
-                        $('#contain').css('background-color', 'white') //change the color on rightclick
+                    $('#contain').mouseleave(function () {  
+                        $('#contain').css('background-color', 'white') 
                     })
                 })*/
 
@@ -204,10 +211,136 @@
 
         //******************  CSS Method *********************
 
-        $(document).ready(function(){
-            
-        })
+        /* $(document).ready(function () {
+             $('#stylebutton').click(function () {
+                 // $('#box').css('background', 'red') 
+                 $('#box').css({ 'background': 'red', 'color': 'yellow' })  //access for '{}' multiple property 
+             })
+         })*/
 
+        //******************  On & Off Method *********************
+
+        /*   $(document).ready(function () {
+               // $('#box').on('mouseover mouseout', function () {
+               //     $(this).toggleClass('blue')
+               // })
+   
+               $('#box').on({
+                   "click": function () {
+                       $(this).css("background", "orange")
+                   },
+                   "mouseover": function () {
+                       $(this).css("background", "red")
+                   },
+                   "mouseout": function () {
+                       $(this).css("background", "yellow")
+                   }
+               })
+               $('#stylebutton').click(function () {
+                   $('#box').off("mouseover mouseout")
+               })
+           })*/
+
+        //******************  Append & Prepend Method *********************
+
+        /* $(document).ready(function () {
+             // $('#appendbutton').click(function () {
+             //     $('#box').append("<h2>hello</h2>")
+             // })
+             // $('#prependbutton').click(function () {
+             //     $('#box').prepend('<h2>hello</h2>')
+             // })
+ 
+             $('#appendbutton').click(function () {
+                 $('ol').append("<li>append</li>")
+             })
+             $('#prependbutton').click(function () {
+                 $('ol').prepend('<li>prepend</li>')
+             })
+         })*/
+
+
+        //******************   After & Before Method *********************
+
+        /*$(document).ready(function () {
+            $('#afterbtn').click(function () {
+                $('#box').after('<h1>after : hello</h1>')
+            })
+            $('#beforbtn').click(function () {
+                $('#box').before('<h1>before : hello</h1>')
+            })
+        })*/
+
+        //******************   Empty & Remove Method     *********************
+
+        /* $(document).ready(function () {
+             $("#emptybtn").click(function () {
+                 $('#box').empty()
+             })
+             $("#removebtn").click(function () {
+                 $('#box').remove()
+             })
+         })*/
+
+        //******************   AppendTo & PrependTo Method    *********************
+
+        /*$(document).ready(function () {
+            $('#apendtobtn').click(function () {
+                $('<h3>appendTo : hello</h3>').appendTo('#box')
+            })
+            $('#prependtobtn').click(function () {
+                $('<h2>prependto : hello</h2>').prependTo('#box')
+            })
+        })*/
+
+        //******************   Clone Method    *********************
+
+        /* $(document).ready(function () {
+             $('#clonebtn').click(function () {
+                 $('#box h1').clone().prependTo('#box1')
+                 $('#box p').clone().appendTo('#box1')
+             })
+         })*/
+
+        //******************  ReplaceWith & ReplaceAll Method  *********************
+
+        /*  $(document).ready(function () {
+              $('#replacebtn').click(function () {
+                  // $('#box p:nth-child(4)').replaceWith('<h1>hello</h1>')
+                  $('<span>hellooo<span>').replaceAll('#box p')
+              })
+          })*/
+
+        //******************  Wrap & UnWrap Method  *********************
+
+        /*  $(document).ready(function () {
+              $('#wrapbtn').click(function () {
+                  $('#box p').wrap('<h3></h3>')
+              })
+              $('#unwrapbtn').click(function () {
+                  $('#box p').unwrap()
+              })
+          }) */
+
+        //******************  WrapAll & WrapInner Method  *********************
+
+        /*  $(document).ready(function () {
+              $('#Wrapallbtn').click(function () {
+                  $('p').wrapAll('<div class="red"></div>')
+              })
+              $('#wrapinerbtn').click(function () {
+                  $('h1').wrapInner('<span class="blue"></span>')
+              })
+          }) */
+
+
+        //******************  Width & Height Methods  *********************
+
+        $(document).ready(function () {
+            $('#widthbtn').click(function () {
+                console.log($('#box').width())
+            })
+        })
     </script>
 </body>
 
