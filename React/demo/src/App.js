@@ -1,5 +1,11 @@
 // import { useState } from 'react';
 import './App.css';
+import UseEffect from './FunctionBase/Hooks/UseEffect';
+// import ShouldUpdate from './ClassBase/ShouldUpdate';
+// import ParentComponent from './ClassBase/WillUnmount/ParentComponent';
+// import DidUpdate from './ClassBase/DidUpdate';
+// import DidMount from './ClassBase/DidMount';
+// import RenderLifeCycle from './ClassBase/RenderLifeCycle';
 // import Constructore from './ClassBase/Constructore';
 // import FunctionPasswithProps from './FunctionBase/FunctionPasswithProps';
 // import IfElse from './FunctionBase/IfElse';
@@ -29,6 +35,10 @@ function App() {
   // function getdata() {
   //   alert("hello")
   // }
+
+  // ******** Render Life Cycle ********
+  // const [name, setName] = useState("umesh")
+
   return (
     <div className="App">
       <h1>React Practice</h1>
@@ -63,6 +73,21 @@ function App() {
       {/* <FunctionPasswithProps data={getdata} /> */}
 
       {/* <Constructore /> */}  {/* Class base with Constructore */}
+
+      {/* <h2>Render method</h2>
+      <RenderLifeCycle name={name} /> 
+      <button onClick={() => setName("taviya")}>Submit</button> */}
+
+      {/* <DidMount /> */}
+
+      {/* <DidUpdate /> */}
+
+      {/* <ShouldUpdate /> */}
+
+      {/* <ParentComponent /> */}
+
+      <UseEffect />
+
     </div>
   );
 }
