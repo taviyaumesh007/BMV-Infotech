@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 import './App.css';
+import ArrayWithMap from './FunctionBase/ArrayWithMap';
+import ParentUseEfect from './FunctionBase/Hooks/ParentUseEfect';
 import UseEffect from './FunctionBase/Hooks/UseEffect';
 // import ShouldUpdate from './ClassBase/ShouldUpdate';
 // import ParentComponent from './ClassBase/WillUnmount/ParentComponent';
@@ -86,7 +88,11 @@ function App() {
 
       {/* <ParentComponent /> */}
 
-      <UseEffect />
+      {/* <UseEffect /> */}
+
+      {/* <ParentUseEfect /> */}
+
+      <ArrayWithMap />
 
     </div>
   );
