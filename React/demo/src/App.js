@@ -1,8 +1,12 @@
 // import { useState } from 'react';
 import './App.css';
-import ArrayWithMap from './FunctionBase/ArrayWithMap';
-import ParentUseEfect from './FunctionBase/Hooks/ParentUseEfect';
-import UseEffect from './FunctionBase/Hooks/UseEffect';
+import UseMemo from './FunctionBase/Hooks/UseMemo';
+import ParentsComponets from './FunctionBase/PureComponents/ParentsComponets';
+// import PerantesComponents from './FunctionBase/LiftingStateUp/PerantesComponents';
+// import ArrayWithMap from './FunctionBase/ArrayWithMap';
+// import ParentUseEfect from './FunctionBase/Hooks/ParentUseEfect';
+// import UseEffect from './FunctionBase/Hooks/UseEffect';
+// import ReuseComponents from './ReUseCompents/ReuseComponents';
 // import ShouldUpdate from './ClassBase/ShouldUpdate';
 // import ParentComponent from './ClassBase/WillUnmount/ParentComponent';
 // import DidUpdate from './ClassBase/DidUpdate';
@@ -92,7 +96,14 @@ function App() {
 
       {/* <ParentUseEfect /> */}
 
-      <ArrayWithMap />
+      {/* <ArrayWithMap /> */}
+
+      {/* <ReuseComponents /> */}
+
+      {/* <PerantesComponents /> */}
+
+      {/* <ParentsComponets /> */}
+      <UseMemo />
 
     </div>
   );
