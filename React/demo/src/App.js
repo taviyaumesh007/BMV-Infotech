@@ -1,7 +1,11 @@
 // import { useState } from 'react';
 import './App.css';
-import UseMemo from './FunctionBase/Hooks/UseMemo';
-import ParentsComponets from './FunctionBase/PureComponents/ParentsComponets';
+import HOC from './FunctionBase/HOC';
+// import Ref from './ClassBase/Ref';
+// import ControllComponents from './FunctionBase/Hooks/ControllComponents';
+// import UseMemo from './FunctionBase/Hooks/UseMemo';
+// import UseRef from './FunctionBase/Hooks/UseRef';
+// import ParentsComponets from './FunctionBase/PureComponents/ParentsComponets';
 // import PerantesComponents from './FunctionBase/LiftingStateUp/PerantesComponents';
 // import ArrayWithMap from './FunctionBase/ArrayWithMap';
 // import ParentUseEfect from './FunctionBase/Hooks/ParentUseEfect';
@@ -103,7 +107,16 @@ function App() {
       {/* <PerantesComponents /> */}
 
       {/* <ParentsComponets /> */}
-      <UseMemo />
+
+      {/* <UseMemo /> */}
+
+      {/* <Ref /> */}
+
+      {/* <UseRef /> */}
+
+      {/* <ControllComponents /> */}
+
+      <HOC />
 
     </div>
   );
