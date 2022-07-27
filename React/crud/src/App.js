@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+// import Form7 from './Form7';
+// import Form6 from './Form6';
+// import Form5 from './Form5';
+// import Form3 from './Form3';
+// import Form2 from './Form2';
+// import Form from './Form';
+import Form4 from './Form4';
+// import CrudInClass from './CrudInClass';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Form /> */}
+      {/* <Form2 /> */}
+      {/* <Form3 /> */}
+      <Form4 />
+      {/* <CrudInClass /> */}
+      {/* <Form5 /> */}
+      {/* <Form6 /> */}
+      {/* <Form7 /> */}
     </div>
   );
 }
